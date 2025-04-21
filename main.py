@@ -29,7 +29,7 @@ if model_name not in models:
     model_name = "yolov8n-fn.pt"
 
 model = YOLO(f"models/{model_name}")  # Load the YOLOv8 model
-logger.info("YOLOv8-Nano model loaded successfully")
+logger.info(f"{model_name} model loaded successfully")
 
 @app.get("/")
 async def root():
