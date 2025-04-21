@@ -16,7 +16,7 @@ export const options = {
 
 
 export default () => {
-  const url = 'http://host.docker.internal:8000/detect';
+  const url = 'https://yolo.abdulhakkeempa.com/detect';
 
   const payload = {
     file: http.file(imageBin, 'car.jpg', 'image/jpeg'),

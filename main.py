@@ -73,12 +73,13 @@ async def detect_number_plate(file: UploadFile = File(...)):
         
         return {
             "detections": detections,
-            "processing_time": elapsed_time
+            "processing_time": elapsed_time,
+            "model": model_name
         }
 
     except Exception as e:
         logger.error(f"Error during detection: {str(e)}")
-        return {"error": str(e)}
+        return {"error": str(e)}, 404
 
 if __name__ == "__main__":
     import uvicorn
