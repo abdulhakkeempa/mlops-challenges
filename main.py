@@ -6,6 +6,9 @@ import io
 import time
 import logging
 import os
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # Configure logging to write to file and console
 logging.basicConfig(
