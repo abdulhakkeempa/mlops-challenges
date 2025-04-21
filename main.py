@@ -5,6 +5,7 @@ import numpy as np
 import io
 import time
 import logging
+import os
 
 # Configure logging to write to file and console
 logging.basicConfig(
@@ -20,8 +21,14 @@ logger = logging.getLogger(__name__)
 # Initialize FastAPI
 app = FastAPI(title="YOLOv8 Number Plate Detection API")
 
-# Load YOLOv8 Model
-model = YOLO("models/yolov8n-fn.pt")
+model_name = os.getenv("MODEL_NAME", "yolov8n-fn.pt")
+
+models = ["yolov8n-fn.pt", "yolov8s-fn.pt", "yolov8m-fn.pt"]
+if model_name not in models:
+    logger.error(f"Invalid model name: {model_name}. Defaulting to yolov8n-fn.pt")
+    model_name = "yolov8n-fn.pt"
+
+model = YOLO(f"models/{model_name}")  # Load the YOLOv8 model
 logger.info("YOLOv8-Nano model loaded successfully")
 
 @app.get("/")

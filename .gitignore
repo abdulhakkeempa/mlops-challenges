@@ -2,3 +2,4 @@ venv/
 test.py
 images.jpeg
 *.log
+node_modules/

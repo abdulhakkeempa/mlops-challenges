@@ -1,0 +1,11 @@
+config:
+  target: "http://localhost:8000"
+  phases:
+    - duration: 2
+      arrivalRate: 1
+  processor: "./uploadProcessor.js" # Link to custom JS
+
+scenarios:
+  - name: "Upload using JS function"
+    flow:
+      - function: "uploadImage"
