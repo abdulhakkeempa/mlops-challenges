@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="YOLOv8 Number Plate Detection API")
 
 model_name = os.getenv("MODEL_NAME", "yolov8n-fn.pt")
+logger.info(f"Model name set to: {model_name}")
 
 models = ["yolov8n-fn.pt", "yolov8s-fn.pt", "yolov8m-fn.pt"]
 if model_name not in models:
