@@ -16,7 +16,7 @@ export const options = {
 
 
 export default () => {
-  const url = 'https://yolo.abdulhakkeempa.com/detect';
+  const url = 'ENDPOINT_URL';
 
   const payload = {
     file: http.file(imageBin, 'car.jpg', 'image/jpeg'),

@@ -1,0 +1,1 @@
+`docker run --rm -i -v ${PWD}:/app -w /app grafana/k6 run -o json=/app/fargate_result.json /app/test.js`
