@@ -1,3 +1,9 @@
+"""
+This is file is used to test the AWS Lambda function using a POST request.
+This code reads an image file, encodes it in base64, and sends it to the Lambda function via an API Gateway endpoint.
+This is to ensure that the deployed Lambda function works as expected.
+"""
+
 import base64
 import requests
 
