@@ -33,7 +33,7 @@ python-dotenv==1.1.0
 python-multipart==0.0.20
 pytz==2025.2
 PyYAML==6.0.2
-requests==2.32.3
+requests==2.32.4
 scipy==1.15.2
 seaborn==0.13.2
 six==1.17.0
